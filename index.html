@@ -3,32 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/3422eeb16c.js" crossorigin="anonymous"></script>
     <title>Pokedex - JS</title>
 </head>
 <body>
 
+    <!--Logo do topo da pagina-->
     <img class="img-logo" src="pokemon-logo.png" alt="Pokemon Logo">
     
     <main>  
-
+        
+        <!--Barra de pesquisa-->
         <div class="search-bar">
             <!--<label for="pokemonName">Digite o nome do Pokémon:</label>-->
-            <input type="text" name="pokemonName" id="pokemonName" placeholder="Digite o nome do Pokémon...">
-            <button onclick="call(pokemonName.value);">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                Pesquisar
-            </button>
+            <img class="img-search" src="pokeball.png" alt="">
+            <input class="input-search" type="text" name="pokemonName" id="pokemonName" placeholder="Digite o nome do Pokémon..." maxlength="60">
+            <div class="btn-search" title="Buscar">
+                <i class="fa-solid fa-magnifying-glass poke-icon"></i>
+            </div>
+        </div>
+        
+        <!--Seção contendo os pokemons listado-->
+        <section id="pokemon-data">             
+            <!--DADOS CARREGADOS NO JS-->
+        </section>
+        
+        <div id="popup-pokedata" class="popup">
+            
         </div>
 
-        <section class="pokemon-data">
-
-
-        </section>
 
     </main>
+
+
+
 </body>
 </html>

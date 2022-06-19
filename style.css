@@ -1,28 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+.hidden{
+    display: none !important;
+}
+
 body{
+    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(#3E5FB2,#ECBC09)
 }
 
 main{
+    background-color: #fff;
     margin: 5em 2em;
     border: solid 1px #000;
     padding: 1em;
     border-radius: 0.5em;
-    width: 50vw;
+    width: 70vw;
+    height: 80vh;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 1px 2px 10px #000;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .img-logo{
     width: 20em;
     height: 7em;
+    margin-top: 3em;
+}
+
+.search-bar{
+
+    padding: 0.7em;
+    border: solid 1px #000;
+    border-radius: 2em;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5em;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.img-search{
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.input-search{
+    all: unset;
+    width: 87%;
+    margin-left: .5em;
+}
+
+.btn-search{
+    all: unset;
+    cursor: pointer;
+}
+
+.poke-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #000;
+    margin: 1em 1em;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.poke-card:hover{
+    transition: all 0.6s;
+    transform: scale(1.1,1.1);
+    box-shadow: 4px 4px 7px 2px rgba(0,0,0,0.35);
+}
+
+.pokemon-foto{
+    width: 8em;
+    height: 5em;
+}
+
+.popup{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border: solid 1px #000;
+    background-color: #fff;
+    width: 40%;
+    height: 50%;
+    z-index: 1000;
+    margin-top: 5em;
+}
+
+.popup-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: solid 1px #c6c6c6;
+    position: absolute;
+    padding: 1em;
+    top:0;
+}
+
+.fa-solid:hover{
+    color: #FE0000;
+    cursor: pointer;
+}
+
+hr{
+    width: 100%;
 }
