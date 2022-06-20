@@ -23,10 +23,10 @@ function sectionData(dataJson){
         const imgUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index + 1}.png`
 
         sectionData.innerHTML += `
-        <div class="poke-card" title="${pokemonName}" onclick="pokemonSpec('${pokemon.url}');">
-            <img src="${imgUrl}" class="pokemon-foto">
-            <h5 class="poke-name">${pokemonName}</h5>
-        </div>`
+            <div class="poke-card" title="${pokemonName}" onclick="pokemonSpec('${pokemon.url}');">
+                <img src="${imgUrl}" class="pokemon-foto">
+                <h5 class="poke-name">${pokemonName}</h5>
+            </div>`
     })
 }
 
@@ -96,7 +96,7 @@ function pokemonSpec(url){
 //retorna todos os pokemons para listar em tela
 function pokemons(){
 
-    const url = "https://pokeapi.co/api/v2/pokemon?limit=1126&offset=0"
+    const url = "https://pokeapi.co/api/v2/pokemon?limit=500&offset=0"
 
     let resp;
     let request = new XMLHttpRequest();
